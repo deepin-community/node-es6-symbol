@@ -1,15 +1,15 @@
 version=4
 opts=\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-es6-symbol-$1.tar.gz/ \
- https://github.com/medikoo/es6-symbol/tags .*/archive/v?([\d\.]+).tar.gz group
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-es6-symbol-$1/ \
+ https://github.com/medikoo/es6-symbol/tags .*/archive/.*/v?([\d\.]+).tar.gz group
 
 # It is not recommended use npmregistry. Please investigate more.
 # Take a look at https://wiki.debian.org/debian/watch/
-opts="searchmode=plain,component=ext,pgpmode=none" \
+opts="searchmode=plain,ctype=nodejs,component=ext,pgpmode=none" \
  https://registry.npmjs.org/ext https://registry.npmjs.org/ext/-/ext-([\d\.]+)@ARCHIVE_EXT@ checksum
 
 # It is not recommended use npmregistry. Please investigate more.
 # Take a look at https://wiki.debian.org/debian/watch/
-opts="searchmode=plain,component=type,pgpmode=none" \
+opts="searchmode=plain,ctype=nodejs,component=type,pgpmode=none" \
  https://registry.npmjs.org/type https://registry.npmjs.org/type/-/type-([\d\.]+)@ARCHIVE_EXT@ checksum

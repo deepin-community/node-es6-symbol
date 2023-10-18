@@ -9,7 +9,7 @@ Build-Depends: debhelper-compat (= 13)
  , mocha <!nocheck>
  , node-d <!nocheck>
  , node-sinon <!nocheck>
-Standards-Version: 4.5.0
+Standards-Version: 4.6.0
 Vcs-Browser: https://salsa.debian.org/js-team/node-es6-symbol
 Vcs-Git: https://salsa.debian.org/js-team/node-es6-symbol.git
 Homepage: https://github.com/medikoo/es6-symbol
